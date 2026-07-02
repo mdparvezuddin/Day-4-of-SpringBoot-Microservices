@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title th:text="${title}">School Portal</title>
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+	<header>
+
+	    <div class="logo">
+
+	        <img src="/images/logo.png" class="logo-img">
+
+	        <span>School Portal</span>
+
+	    </div>
+
+	    <nav>
+
+	        <a href="/">Home</a>
+
+	        <a href="/about">About</a>
+
+	        <a href="/dashboard">Dashboard</a>
+
+	        <a href="/students">Students</a>
+
+	        <a href="/contact">Contact</a>
+
+	    </nav>
+
+	</header>
+
+    <!-- ================= BODY ================= -->
+
+    <div class="main">
+
+        <!-- LEFT PANEL -->
+
+		<div class="sidebar">
+
+		    <button onclick="showContent('dashboard')">
+		        🏠 Dashboard
+		    </button>
+
+		    <button onclick="showContent('students')">
+		        👨‍🎓 Students
+		    </button>
+
+		    <button onclick="showContent('teachers')">
+		        👨‍🏫 Teachers
+		    </button>
+
+		    <button onclick="showContent('courses')">
+		        📚 Courses
+		    </button>
+
+		    <button onclick="showContent('college')">
+		        🏫 College
+		    </button>
+
+		    <button onclick="showContent('semester')">
+		        📅 Semester
+		    </button>
+
+		    <button onclick="showContent('fees')">
+		        💰 Fees
+		    </button>
+
+		    <button onclick="showContent('library')">
+		        📖 Library
+		    </button>
+
+		    <button onclick="showContent('settings')">
+		        ⚙ Settings
+		    </button>
+
+		</div>
+
+        <!-- CENTER -->
+
+        <section class="center">
+
+            <h2 th:text="${title}">Home</h2>
+
+            <p th:text="${message}"></p>
+
+            <div id="content">
+
+                <h3>Welcome</h3>
+
+                <p>
+                    Click A B C D to change this area.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- RIGHT -->
+
+        <aside class="right">
+
+            <img src="/images/profile.png" class="profile">
+
+            <img src="/images/school.jpg" class="banner">
+
+        </aside>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 School Portal
+
+    </footer>
+
+</div>
+
+<script src="/js/script.js"></script>
+
+</body>
+
+</html>
